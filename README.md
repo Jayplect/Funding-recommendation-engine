@@ -74,11 +74,11 @@ Lastly, I created a call to save the model's weight during execution for every f
 After 55 epochs, the **loss and accuracy for the model was 0.566 and 0.726**, respectively.
 
 - Optimization 
-In order to optimize the model's performance, I altered the model hyperparameters. Firstly, I included one of the identification features - `Name` features in the X. I then binned the Name features as well as the Affiliation features in the other category as earlier explained. I also increased the cut-off values for the `classification` and `application` feature bins. Furthermore, I included a third hidden layer in the model and increased the nodes for each of the previous hidden layer to 100 and 40 (Fig. 2). In this case, the first, second and third activation functions were relu, tanh and relu, respectively. Similarly to the unoptimized model, the output layer had one node with a sigmoid activation function.
+In order to optimize the model's performance, I altered the model hyperparameters. Firstly, I included one of the identification features - `Name` features in the X. I then binned the Name features as well as the Affiliation features in the other category as earlier explained. I also increased the cut-off values for the `classification` and `application` feature bins. Furthermore, I included a third hidden layer in the model and increased the nodes for each of the previous hidden layer to 100 and 40 (Fig. 2). In this case, the first, second and third activation functions were relu, tanh and relu, respectively. Similarly to the unoptimized model, the output layer had one node with a sigmoid activation function but with the epoch increased to 100
 
 Fig. 2: Structure of Optimized model
 
-<img width="270" alt="image" src="https://github.com/Jayplect/deep-learning-AlphabetSoup/assets/107348074/993d43c8-76d7-4e9a-8b5f-038865c6fb99">
+<img width="500" alt="image" src="https://github.com/Jayplect/deep-learning-AlphabetSoup/assets/107348074/993d43c8-76d7-4e9a-8b5f-038865c6fb99">
 
 After optimization, **the model significantly improved**. **The model's loss and accuracy was 0.4723 and 0.7722**, respectively.
 

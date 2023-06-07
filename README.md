@@ -24,27 +24,27 @@ From Alphabet Soup’s business team, I have received a CSV containing more than
 ## Results
 
 - Data Preprocessing
+I started by collecting and preparing the dataset that will be used for training and testing the classifier. Because of the question I wanted to answer, I selected `IS_SUCCESSFUL` as the target of my model while the remaining dataset formed the features. After inspecting if the dataset contained features relevant to predicting the success of applicants, I decided to remove the identification features. Preprocessing steps also included checking for and handling missing values, encoding categorical variables, and scaling numerical features. In addition, I observed that the exact value of some of the features was not as important as the general range or category they fall into. Accordingly, in order to smoothen out noise in the dataset I binned some of the features (`APPLICATION_TYPE` and `CLASSIFICATION`) by grouping similar values in feature together. 
+  - example of binning
+  
+        # Choose a cutoff value and create a list of classifications to be replaced
+        cutoff_value = 1500
+        classifications_to_replace = list(classification_unique[classification_unique < cutoff_value].index)
 
-What variable(s) are the target(s) for your model?
+        # Replace in dataframe
+        for cls in classifications_to_replace:
+            application_df['CLASSIFICATION'] = application_df['CLASSIFICATION'].replace(cls,"Other")
 
-What variable(s) are the features for your model?
+        # Check to make sure binning was successful
+        application_df['CLASSIFICATION'].value_counts()
 
-What variable(s) should be removed from the input data because they are neither targets nor features?
-
-
-Compiling, Training, and Evaluating the Model
+- Compiling, Training, and Evaluating the Model
 
 How many neurons, layers, and activation functions did you select for your neural network model, and why?
 Were you able to achieve the target model performance?
 What steps did you take in your attempts to increase model performance?
 
 Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
-
-
-
-Format images in the report so that they display correction (2)
-
-
 
 
 ## References

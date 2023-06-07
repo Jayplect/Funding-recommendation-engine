@@ -71,11 +71,7 @@ Lastly, I created a call to save the model's weight during execution for every f
             save_weights_only=True,
             save_freq= int(save_period*n_batches))
 
-After 55 epochs, the loss and accuracy for the model was 0.566 and 0.726, respectively.
-
-  - Snapshot of model perfomance
-  
-<img width="500" alt="image" src="https://github.com/Jayplect/deep-learning-AlphabetSoup/assets/107348074/d8d5c216-4cda-45b0-967a-182be68ede8e">
+After 55 epochs, the **loss and accuracy for the model was 0.566 and 0.726**, respectively.
 
 - Optimization 
 In order to optimize the model's performance, I altered the model hyperparameters. Firstly, I included one of the identification features - `Name` features in the X. I then binned the Name features as well as the Affiliation features in the other category as earlier explained. I also increased the cut-off values for the `classification` and `application` feature bins. Furthermore, I included a third hidden layer in the model and increased the nodes for each of the previous hidden layer to 100 and 40 (Fig. 2). In this case, the first, second and third activation functions were relu, tanh and relu, respectively. Similarly to the unoptimized model, the output layer had one node with a sigmoid activation function.
@@ -84,6 +80,7 @@ Fig. 2: Structure of Optimized model
 
 <img width="270" alt="image" src="https://github.com/Jayplect/deep-learning-AlphabetSoup/assets/107348074/993d43c8-76d7-4e9a-8b5f-038865c6fb99">
 
+After optimization, **the model significantly improved**. **The model's loss and accuracy was 0.4723 and 0.7722**, respectively.
 
 ## Summary
 The overall results of the deep learning model can be evaluated based on metrics such as loss and accuracy. The model's performance on the test set provides an indication of its effectiveness in predicting the success of applicants for funding.

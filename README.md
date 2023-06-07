@@ -24,19 +24,23 @@ From Alphabet Soup’s business team, I have received a CSV containing more than
 ## Results
 
 - Data Preprocessing
-I started by collecting and preparing the dataset that will be used for training and testing the classifier. Because of the question I wanted to answer, I selected `IS_SUCCESSFUL` as the target of my model while the remaining dataset formed the features. After inspecting if the dataset contained features relevant to predicting the success of applicants, I decided to remove the identification features. Preprocessing steps also included checking for and handling missing values, encoding categorical variables, and scaling numerical features. In addition, I observed that the exact value of some of the features was not as important as the general range or category they fall into. Accordingly, in order to smoothen out noise in the dataset I binned some of the features (`APPLICATION_TYPE` and `CLASSIFICATION`) by grouping similar values in feature together. 
+
+Under this step, I prepared the dataset that will be used for training and testing the classifier. Because of the question I wanted to answer, I selected `IS_SUCCESSFUL` as the target of my model while the remaining dataset formed the features. After inspecting if the dataset contained features relevant to predicting the success of applicants, I decided to remove the identification features. Preprocessing steps also included checking for and handling missing values, encoding categorical variables, and scaling numerical features. In addition, I observed that the exact value of some of the features was not as important as the general range or category they fall into. Accordingly, in order to smoothen out noise in the dataset I binned some of the features (`APPLICATION_TYPE` and `CLASSIFICATION`) by grouping similar values in feature together. 
   - example of binning
-  
+        
+        # look at field value counts for binning
+        unique_fields = df.field.value_counts()
+        
         # Choose a cutoff value and create a list of classifications to be replaced
-        cutoff_value = 1500
-        classifications_to_replace = list(classification_unique[classification_unique < cutoff_value].index)
+        cutoff_value = value
+        field_to_replace = list(unique_fields[unique_fields < cutoff_value].index)
 
         # Replace in dataframe
-        for cls in classifications_to_replace:
-            application_df['CLASSIFICATION'] = application_df['CLASSIFICATION'].replace(cls,"Other")
+        for field in field_to_replace:
+            df['FIELD'] = df['FIELD'].replace(field,"Other")
 
         # Check to make sure binning was successful
-        application_df['CLASSIFICATION'].value_counts()
+        df['FIELD'].value_counts()
 
 - Compiling, Training, and Evaluating the Model
 

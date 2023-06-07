@@ -44,7 +44,7 @@ Under this step, I prepared the dataset that will be used for training and testi
           df['FIELD'].value_counts()
 
 - Compiling, Training, and Evaluating the Model
-To build the neural network, I imported the necessary Tensorflow and Keras modules. I then defined the neural network architecture using the Sequential model from keras. I added two layers with similar activation function (i.e., `relu`) using the `Dense` class. The number of neurons were set to 80 and 30 for the first and second hidden layer, respectively (Fig 1).
+To build the neural network, I imported the necessary Tensorflow and Keras modules. I then defined the neural network architecture using the Sequential model from keras. I added two layers with similar activation function (i.e., `relu`) using the `Dense` class. The number of neurons were set to 80 and 30 for the first and second hidden layer, respectively (Fig 1). The output layer had one node with a sigmoid activation function.
 
 Fig 1: Structure of model
 
@@ -78,17 +78,20 @@ After 55 epochs, the loss and accuracy for the model was 0.566 and 0.726, respec
 <img width="500" alt="image" src="https://github.com/Jayplect/deep-learning-AlphabetSoup/assets/107348074/d8d5c216-4cda-45b0-967a-182be68ede8e">
 
 - Optimization 
+In order to optimize the model's performance, I altered the model hyperparameters. Firstly, I included one of the identification features - `Name` features in the X. I then binned the Name features as well as the Affiliation features in the other category as earlier explained. I also increased the cut-off values for the `classification` and `application` feature bins. Furthermore, I included a third hidden layer in the model and increased the nodes for each of the previous hidden layer to 100 and 40. In this case, the first, second and third activation functions were relu, tanh and relu, respectively. Similarly to the unoptimized model, the output layer had one node with a sigmoid activation function.
 
 Fig 2: Structure of Optimized model
 
-In order to optimize the model's performance, I increased the model hyperparameters 
+<img width="500" alt="image" src="https://github.com/Jayplect/deep-learning-AlphabetSoup/assets/107348074/c54fdae9-ccfd-4d54-a8e5-c93623747be9">
 
-Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
+## Summary
+The overall results of the deep learning model can be evaluated based on metrics such as loss and accuracy. The model's performance on the test set provides an indication of its effectiveness in predicting the success of applicants for funding.
 
+Additionally, it would be valuable to compare the model's performance against a baseline or benchmark model. If available, consider comparing the deep learning model's results with other machine learning algorithms like logistic regression, decision trees, or random forests to determine if the neural network outperforms them.
 
+Based on the results and analysis, a recommendation for a different model that could potentially solve the classification problem is to try an ensemble learning approach, such as a Random Forest classifier.
 
-
-
+It's important to note that the recommendation for a different model is based on the assumption that the deep learning model's performance might not be optimal or satisfactory. However, the final choice of model depends on the specific characteristics of the dataset, the resources available, and the trade-offs between interpretability, accuracy, and other factors relevant to the classification problem at hand.
 
 
 ## References

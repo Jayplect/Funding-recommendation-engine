@@ -8,7 +8,7 @@ The nonprofit foundation Alphabet Soup (a fictional company) wants a tool that c
 ![Pandas](https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white)
 
 ## Data Description
-From Alphabet Soup’s business team, I have received a CSV containing more than 34,000 organizations that have received funding from Alphabet Soup over the years. Within this dataset are a number of columns that capture metadata about each organization, such as:
+The dataset, a CSV, contained more than 34,000 organizations that have received funding from Alphabet Soup over the years. Within this dataset are a number of features that capture metadata about each organization, such as:
 `EIN and NAME`—Identification columns,
 `APPLICATION_TYPE`—Alphabet Soup application type,
 `AFFILIATION`—Affiliated sector of industry,

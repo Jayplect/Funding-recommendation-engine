@@ -43,7 +43,7 @@ Under this step, I prepared the dataset that will be used for training and testi
           # Check to make sure binning was successful
           df['FIELD'].value_counts()
 
-- Compiling, Training, and Evaluating the Model
+- Compiling, Training, and Evaluating the Model  
 To build the neural network, I imported the necessary Tensorflow and Keras modules. I then defined the neural network architecture using the Sequential model from keras. I added two layers with similar activation function (i.e., `relu`) using the `Dense` class. The number of neurons were set to 80 and 30 for the first and second hidden layer, respectively (Fig. 1). The output layer had one node with a sigmoid activation function.
 
 Fig. 1: Structure of model

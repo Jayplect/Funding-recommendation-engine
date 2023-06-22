@@ -73,7 +73,8 @@ Lastly, I created a call to save the model's weight during execution for every f
 
 After 55 epochs, the **loss and accuracy for the model was 0.566 and 0.726**, respectively.
 
-- Optimization 
+- Optimization
+
 In order to optimize the model's performance, I altered the model hyperparameters. Firstly, I included one of the identification features - `Name` features in the X. I then binned the Name features as well as the Affiliation features in the other category as earlier explained. I also increased the cut-off values for the `classification` and `application` feature bins. Furthermore, I included a third hidden layer in the model and increased the nodes for each of the previous hidden layer to 100 and 40 (Fig. 2). In this case, the first, second and third activation functions were relu, tanh and relu, respectively. Similarly to the unoptimized model, the output layer had one node with a sigmoid activation function but with the epoch increased to 100
 
 Fig. 2: Structure of Optimized model

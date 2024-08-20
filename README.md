@@ -1,5 +1,5 @@
 ## Overview of the Analysis
-The nonprofit foundation Alphabet Soup wants a tool that can help it select the applicants for funding with the best chance of success in their ventures. With my knowledge of machine learning and neural networks, I utilized the features in the provided dataset to create a binary classifier that can predict whether applicants will be successful if funded by Alphabet Soup.
+The nonprofit foundation Alphabet Soup wants a tool that can help it select the applicants for funding with the best chance of success in their ventures. For this project, I built a binary classifier to predict the success of applicants seeking funding from Alphabet Soup. Leveraging the features in the dataset, the model uses machine learning and neural networks to make accurate predictions.
 
 ## Dependencies used
 
